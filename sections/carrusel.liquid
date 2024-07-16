@@ -1,0 +1,186 @@
+{% if section.settings['show-carrusel'] %}
+  <style>
+    .our-story {
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+    }
+    .our-story h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .our-story .underline {
+      display: inline-block;
+      width: 100px;
+      height: 3px;
+      background-color: black;
+      margin-top: -2rem !important;
+    }
+  </style>
+  <div id="carouselExample" class="carousel slide pt-5">
+    <div class="our-story">
+      <h2>{{ section.settings.title }}</h2>
+      <div class="underline"></div>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col">
+            {% if section.settings.image1 != blank %}
+              <img src="{{ section.settings.image1 | image_url }}" alt="carrusel1" width="100%" height="80px">
+            {% else %}
+              <img src="{{ 'carrusel1-1.png' | asset_url }}" alt="carrusel1" width="100%" height="80px">
+            {% endif %}
+          </div>
+          <div class="col">
+            {% if section.settings.image2 != blank %}
+              <img src="{{ section.settings.image2 | image_url }}" alt="carrusel2" width="100%" height="80px">
+            {% else %}
+              <img src="{{ 'carrusel2-1.png' | asset_url }}" alt="carrusel2" width="100%" height="80px">
+            {% endif %}
+          </div>
+          <div class="col">
+            {% if section.settings.image3 != blank %}
+              <img src="{{ section.settings.image3 | image_url }}" alt="carrusel3" width="100%" height="80px">
+            {% else %}
+              <img src="{{ 'carrusel3-1.png' | asset_url }}" alt="carrusel3" width="100%" height="80px">
+            {% endif %}
+          </div>
+          <div class="col">
+            <div class="col">
+              {% if section.settings.image4 != blank %}
+                <img src="{{ section.settings.image4 | image_url }}" alt="carrusel4" width="100%" height="80px">
+              {% else %}
+                <img src="{{ 'carrusel4-1.png' | asset_url }}" alt="carrusel4" width="100%" height="80px">
+              {% endif %}
+            </div>
+          </div>
+          <div class="col">
+            <div class="col">
+              {% if section.settings.image5 != blank %}
+                <img src="{{ section.settings.image5 | image_url }}" alt="carrusel5" width="100%" height="80px">
+              {% else %}
+                <img src="{{ 'carrusel5-1.png' | asset_url }}" alt="carrusel5" width="100%" height="80px">
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item pt-4">
+        <div class="row">
+          <div class="col">
+            {% if section.settings.image1 != blank %}
+              <img src="{{ section.settings.image1 | image_url }}" alt="carrusel1" width="100%" height="80px">
+            {% else %}
+              <img src="{{ 'carrusel1-1.png' | asset_url }}" alt="carrusel1" width="100%" height="80px">
+            {% endif %}
+          </div>
+          <div class="col">
+            {% if section.settings.image3 != blank %}
+              <img src="{{ section.settings.image3 | image_url }}" alt="carrusel3" width="100%" height="80px">
+            {% else %}
+              <img src="{{ 'carrusel3-1.png' | asset_url }}" alt="carrusel3" width="100%" height="80px">
+            {% endif %}
+          </div>
+          <div class="col">
+            {% if section.settings.image2 != blank %}
+              <img src="{{ section.settings.image2 | image_url }}" alt="carrusel2" width="100%" height="80px">
+            {% else %}
+              <img src="{{ 'carrusel2-1.png' | asset_url }}" alt="carrusel2" width="100%" height="80px">
+            {% endif %}
+          </div>
+          <div class="col">
+            <div class="col">
+              {% if section.settings.image5 != blank %}
+                <img src="{{ section.settings.image5 | image_url }}" alt="carrusel5" width="100%" height="80px">
+              {% else %}
+                <img src="{{ 'carrusel5-1.png' | asset_url }}" alt="carrusel5" width="100%" height="80px">
+              {% endif %}
+            </div>
+          </div>
+          <div class="col">
+            <div class="col">
+              {% if section.settings.image4 != blank %}
+                <img src="{{ section.settings.image4 | image_url }}" alt="carrusel4" width="100%" height="80px">
+              {% else %}
+                <img src="{{ 'carrusel4-1.png' | asset_url }}" alt="carrusel4" width="100%" height="80px">
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExample"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Carrusel",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show-carrusel",
+      "label": "Show carrusel",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section title",
+      "default": "FEATURED IN"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "pick image",
+      "info": "select a image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "pick image",
+      "info": "select a image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "pick image",
+      "info": "select a image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "pick image",
+      "info": "select a image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image5",
+      "label": "pick image",
+      "info": "select a image"
+    },
+  ],
+  "presets": [
+    {
+      "name": "carrusel"
+    }
+  ]
+}
+{% endschema %}

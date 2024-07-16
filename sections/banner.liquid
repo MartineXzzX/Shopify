@@ -1,0 +1,22 @@
+{% if section.settings['show-banner'] %}
+  <h3>Banner</h3>
+{% endif %}
+
+{% schema %}
+{
+  "name":"Banner",
+  "settings":[
+    {
+      "type":"checkbox",
+      "id":"show-banner",
+      "label": "Show banner",
+      "default":true
+    }
+  ],
+  "presets":[
+    {
+      "name":"banner"
+    }
+  ]
+}
+{% endschema %}

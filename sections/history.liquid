@@ -1,0 +1,22 @@
+{% if section.settings['show-history'] %}
+  <h3> history </h3>
+{% endif %}
+
+{% schema %}
+{
+  "name": "History",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"show-history",
+      "label": "Show history",
+      "default":true
+    }
+  ],
+  "presets": [
+    {
+      "name":"history"
+    }
+  ]
+}
+{% endschema %}

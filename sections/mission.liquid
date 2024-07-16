@@ -1,0 +1,22 @@
+{% if section.settings['show-mission'] %}
+  <h3> mission </h3>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Mission",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"show-mission",
+      "label": "Show mission",
+      "default":true
+    }
+  ],
+  "presets": [
+    {
+      "name":"mission"
+    }
+  ]
+}
+{% endschema %}

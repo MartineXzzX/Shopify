@@ -1,0 +1,22 @@
+{% if section.settings['show-testimonials'] %}
+  <h3> testimonials </h3>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"show-testimonials",
+      "label": "Show testimonials",
+      "default":true
+    }
+  ],
+  "presets": [
+    {
+      "name":"testimonials"
+    }
+  ]
+}
+{% endschema %}

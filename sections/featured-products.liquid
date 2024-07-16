@@ -1,0 +1,22 @@
+{% if section.settings['show-featuredProducts'] %}
+  <h3> featuredProducts </h3>
+{% endif %}
+
+{% schema %}
+{
+  "name": "FeaturedProducts",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"show-featuredProducts",
+      "label": "Show featuredProducts",
+      "default":true
+    }
+  ],
+  "presets": [
+    {
+      "name":"featuredProducts"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,22 @@
+{% if section.settings['show-lastWorks'] %}
+  <h3> lastWorks </h3>
+{% endif %}
+
+{% schema %}
+{
+  "name": "LastWorks",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"show-lastWorks",
+      "label": "Show lastWorks",
+      "default":true
+    }
+  ],
+  "presets": [
+    {
+      "name":"lastWorks"
+    }
+  ]
+}
+{% endschema %}

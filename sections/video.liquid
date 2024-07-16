@@ -1,0 +1,22 @@
+{% if section.settings['show-video'] %}
+  <h3> video </h3>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Video",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"show-video",
+      "label": "Show video",
+      "default":true
+    }
+  ],
+  "presets": [
+    {
+      "name":"video"
+    }
+  ]
+}
+{% endschema %}

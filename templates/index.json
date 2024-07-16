@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "hero_U4jRnj": {
+      "type": "hero",
+      "settings": {
+        "show-hero": true
+      }
+    },
+    "carrusel_Jw37LA": {
+      "type": "carrusel",
+      "settings": {
+        "show-carrusel": true
+      }
+    },
+    "history_eXxCBz": {
+      "type": "history",
+      "settings": {
+        "show-history": true
+      }
+    },
+    "video_Qaa6A9": {
+      "type": "video",
+      "settings": {
+        "show-video": true
+      }
+    },
+    "mission_MwbmYL": {
+      "type": "mission",
+      "settings": {
+        "show-mission": true
+      }
+    },
+    "pilars_hy9Pe4": {
+      "type": "pilars",
+      "settings": {
+        "show-pilars": true
+      }
+    },
+    "galery_KjXxgG": {
+      "type": "galery",
+      "settings": {
+        "title": "OUR GALLARY",
+        "show-galery": true
+      }
+    },
+    "banner": {
+      "type": "banner",
+      "settings": {
+        "show-banner": true
+      }
+    },
+    "testimonials_aCc9yR": {
+      "type": "testimonials",
+      "settings": {
+        "show-testimonials": true
+      }
+    },
+    "featured_products_fbi9GW": {
+      "type": "featured-products",
+      "settings": {
+        "show-featuredProducts": true
+      }
+    },
+    "last_works_4p79Aj": {
+      "type": "last-works",
+      "settings": {
+        "show-lastWorks": true
+      }
+    }
+  },
+  "order": [
+    "hero_U4jRnj",
+    "carrusel_Jw37LA",
+    "history_eXxCBz",
+    "video_Qaa6A9",
+    "mission_MwbmYL",
+    "pilars_hy9Pe4",
+    "galery_KjXxgG",
+    "banner",
+    "testimonials_aCc9yR",
+    "featured_products_fbi9GW",
+    "last_works_4p79Aj"
+  ]
+}

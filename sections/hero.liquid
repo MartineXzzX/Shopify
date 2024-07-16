@@ -1,0 +1,65 @@
+{% if section.settings['show-hero'] %}
+  <style>
+    .hero {
+      background: url('{{ 'hero-background.jpeg' | asset_url }}') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+  }
+  .hero::before {
+      content: "";
+      position: absolute;
+      top: -50;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+  }
+  .hero-content {
+      z-index: 2;
+  }
+  .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+  }
+  .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+  }
+  </style>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+        <h1>Embrace the Savage Beauty of Felt.</h1>
+        <p>SAFEGUARD CULTURAL HERITAGE</p>
+        <p>TeHer embodies the essence of an ancient and modern paradox, a match made in the Tian-Shan a.k.a. Mountains of Heaven..</p>
+        <div class="underline"></div>
+    </div>
+</section>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show-hero",
+      "label": "Show hero",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "hero"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,101 @@
+{% if section.settings['show-navbar'] %}
+  <style>
+    .navbar-custom {
+      background-color: transparent;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .navbar-custom .nav-link {
+      color: {{ section.settings.text_color }}
+    }
+    .navbar-custom .nav-link:hover {
+      color: lightgray;
+    }
+  </style>
+  
+  <div class="row align-items-center navbar-custom">
+    <div class="col-4 d-flex">
+      <div class="d-flex justify-content-between w-100">
+        <a class="nav-link flex-grow-1 text-center" href="#">SHOP</a>
+        <a class="nav-link flex-grow-1 text-center" href="#">WORKSHOP</a>
+      </div>
+    </div>
+    <div class="col-4 d-flex justify-content-center">
+      <a class="navbar-brand" href="#">
+        <img src="{{ 'logo.png' | asset_url }}" alt="logo" width="100%" height="100px">
+      </a>
+    </div>
+    <div class="col-4 d-flex">
+      <div class="d-flex justify-content-between w-100">
+        <a class="nav-link flex-grow-1 text-center" href="#">GALLERY</a>
+        <a class="nav-link flex-grow-1 text-center" href="#">CONTACT</a>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top">
+    <div class="container">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="row align-items-center navbar-custom">
+          <div class="col-4 d-flex">
+            <div class="d-flex justify-content-between w-100">
+              <a class="nav-link flex-grow-1 text-center" href="#">SHOP</a>
+              <a class="nav-link flex-grow-1 text-center" href="#">WORKSHOP</a>
+            </div>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <a class="navbar-brand" href="#">
+              <img src="{{ 'logo.png' | asset_url }}" alt="logo" width="100%" height="100px">
+            </a>
+          </div>
+          <div class="col-4 d-flex">
+            <div class="d-flex justify-content-between w-100">
+              <a class="nav-link flex-grow-1 text-center" href="#">GALLERY</a>
+              <a class="nav-link flex-grow-1 text-center" href="#">CONTACT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Navbar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show-navbar",
+      "label": "Show navbar",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "pick image",
+      "info": "select a image"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    }
+  ],
+  "presets": [
+    {
+      "name": "navBar"
+    }
+  ]
+}
+{% endschema %}

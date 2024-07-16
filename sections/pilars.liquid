@@ -1,0 +1,22 @@
+{% if section.settings['show-pilars'] %}
+  <h3> pilars </h3>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Pilars",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"show-pilars",
+      "label": "Show pilars",
+      "default":true
+    }
+  ],
+  "presets": [
+    {
+      "name":"pilars"
+    }
+  ]
+}
+{% endschema %}

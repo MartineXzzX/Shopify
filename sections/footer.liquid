@@ -1,0 +1,22 @@
+{% if section.settings['show-foooter'] %}
+  <h3> footer </h3>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Foooter",
+  "settings": [
+    {
+      "type":"checkbox",
+      "id":"show-foooter",
+      "label": "Show foooter",
+      "default":true
+    }
+  ],
+  "presets": [
+    {
+      "name":"foooter"
+    }
+  ]
+}
+{% endschema %}
